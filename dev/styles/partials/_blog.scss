@@ -1,0 +1,128 @@
+.blogWrapperContent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.blogEntry {
+	width: 48.5%;
+	margin: 50px 0 150px 0;
+
+}
+
+.blogImage { 
+	img { 
+		width: 100%;
+	}
+}
+
+.blogContent {
+	display: flex;
+	flex-direction: row;
+}
+
+.blogDate {
+	width: 175px;
+	height: 200px;
+	position: relative;
+	margin: 15px 10px 0 0;
+}
+
+.blogDate-Month {
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: $green;
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+}
+
+.blogDate-Day {
+	font-size: 8rem;
+	position: absolute;
+	top: 0;
+	color: #ececec;
+	z-index: -10;
+
+	h3 { 
+		margin-top: -50px;
+		margin-bottom: 0;
+	}
+}
+
+.blogText {
+	max-width: 400px;
+
+	h3 { // Title of the post
+		font-weight: 500;
+		line-height: 22px;
+		margin-top: 20px;
+	}
+
+	h4 { // Posted by + Comments
+		font-size: 0.875rem;
+		font-weight: 400;
+		color: $green;
+		padding-top: 3px;
+	}
+
+	p { // Posting preview paragraph
+		color: #787878;
+		font-size: 0.875rem;
+		padding-top: 15px;
+	}
+}
+
+@media (max-width: 1270px) {
+	.blogDate-Day {
+		font-size: 7rem;
+	}
+}
+
+@media (max-width: 920px) {
+	.blogDate-Day {
+		font-size: 5rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.blogWrapperContent {
+		flex-direction: column;
+	}
+
+	.blogEntry {
+		width: 100%;
+		margin: 30px 0 30px 0;
+	}
+
+	.blogDate-Day {
+		font-size: 8.2rem;
+	}
+
+	.blogText {
+		max-width: 600px;
+		padding-left: 20px;
+	}
+}
+
+@media (max-width: 770px) {
+	.blogDate-Day {
+		font-size: 7.3rem;
+	}
+}
+
+@media (max-width: 595px) {
+	.blogDate-Day {
+		font-size: 3rem;
+		margin-top: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.blogDate-Month {
+		top: 17px;
+	}
+}

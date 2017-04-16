@@ -1,0 +1,146 @@
+.contactInfoWrapper {
+	position: relative;
+
+	img { 
+		width: 100%;
+	}
+}
+
+.contactBlock {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	max-width: 1070px;
+	padding: 50px;
+	background-color: white;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.contactColumn {
+	width: 33.3%;
+	text-align: center;
+	align-self: center;
+
+	img {
+		width: 40px;
+	}
+
+	p {
+		font-size: 0.8125rem;
+		font-weight: 500;
+		padding-top: 10px;
+	}
+}
+
+.contactColumn:nth-child(2) {
+	border-left: 2px solid $greysection;
+	border-right: 2px solid $greysection;
+}
+
+//map
+.map {
+	display: flex;
+	justify-content: center;
+}
+
+.mapWrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.mapItem { 
+	width: 50%;
+	padding: 70px 12.5px 70px 0;
+
+	img {
+		width: 100%;
+	}
+}
+
+.mapInfo {
+	width: 50%;
+	padding: 0 0 0 12.5px;
+
+	h2 {
+		padding-top: 60px;
+		font-size: 1.5625rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing:0.1em;
+		text-align: center;
+	}
+
+	p {
+		color: $pgrey;
+		font-size: 0.9375rem;
+		padding-top: 15px;
+		line-height: 27px;
+	}
+}
+
+.mapForm {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 40px;
+
+	label { 
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 0.9375rem;
+		padding-top: 20px;
+		text-align: center;
+	}
+
+	input, textarea {
+		padding: 7px 5px;
+		border: 0px;
+		background-color: $greysection;
+	}
+
+	textarea {
+		height: 150px;
+		resize: none;
+	}
+
+	button { 
+		margin: 20px auto 0 auto;
+	}
+}
+
+@media (max-width: 1245px) {
+	.mapForm {
+		textarea {
+			height: 80px;
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	.contactBlock {
+		padding: 20px;
+		flex-direction: column;
+		position: relative;
+	}
+
+	.contactColumn {
+		width: 100%;
+		p {
+			padding: 20px 0;
+		}
+	}
+
+	.mapWrapper {
+		flex-direction: column-reverse;
+	}
+
+	.mapItem {
+		width: 100%;
+	}
+
+	.mapInfo {
+		width: 100%;
+	}
+}

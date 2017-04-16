@@ -1,0 +1,318 @@
+.featured {
+	background-color: $greysection;
+	position: relative; 
+}
+
+.featuredNav { 
+	ul { 
+		list-style-type: none;
+		text-align: center;
+	}
+
+	li { 
+		display: inline-block;
+		text-transform: uppercase;
+		font-size: 1rem;
+		letter-spacing: 0.05em;
+		color: $linkgrey;
+		padding-right: 50px;
+	}
+
+	li:last-child { 
+		padding-right: 0;
+	}
+
+	a:active, a:visited, a:link { 
+		color: $linkgrey;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: $green;
+		transition: 0.3s ease-in;
+	}
+}
+
+.featuredGrid { //contains the featured gallery
+	display: flex;
+	justify-content: space-between;
+	margin: 55px 0 100px 0;
+}
+
+.featuredLeft { //left side
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-right: 15px;
+}
+
+.featuredRight { //right side
+	width: 50%;
+	background-color: white;
+	margin-left: 15px;
+}
+
+.featuredImg {
+	position: relative;
+	img {
+		width: 100%;
+		z-index: 0;
+	}
+}
+
+.featuredItem { //contains the plant img, description, and name of item
+	background-color: white;
+	width: calc(50% - 15px);
+	height: calc(50% - 15px);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.featuredItemInfo {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+
+	h4 { //name of plant item
+		font-weight: 400;
+		font-size: 1rem;
+		line-height: 18px;
+		padding: 0 50px;
+	}
+
+	p { //pricing
+		color: #c0c0c0;
+		padding: 10px 0 15px 0;
+	}
+}
+
+.featuredItem:nth-child(1), .featuredItem:nth-child(2) { //top row of items in left col
+	margin-bottom: 30px;
+}
+
+.featuredAddCart {
+	width: 100%;
+	text-transform: uppercase;
+
+	p { 
+		text-align: center;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		padding: 15px 0;
+		background-color: $greysection;
+		transition: 0.3s ease-in;
+		font-size: 0.875rem;
+	}
+}
+
+.featuredAddCart p:hover { 
+	background-color: $green;
+	color: white;
+}
+
+.featuredRight {
+	background-color: $greysection;
+	border: 7px solid white;
+	padding: 100px 50px;
+
+	h3 {
+		padding-top: 0;
+		margin: 0;
+		font-size: 2.25rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		line-height: 42px;
+		color: $bggrey;
+	}
+
+	span {
+		color: $green;
+		font-weight: 600;
+	}
+
+	p { 
+		padding: 30px 0 20px 0;
+		color: $pgrey;
+	}
+}
+
+.moreLink {
+	padding-top: 40px; 
+
+	a:before {
+		content: "";
+		display: block;
+		background: url('../../images/greenline.png') no-repeat;
+		width: 50px;
+		height: 5px;
+		float: left;
+		margin: 12px 0 0 0;
+	}	
+
+	a:active, a:visited, a:link { 
+		color: $bggrey;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding-left: 5px;
+		font-weight: 500;
+		font-size: 0.875rem;
+		letter-spacing: 0.2em;
+	}
+
+	a:hover {
+		color: $green;
+		transition: 0.3s ease-in;
+	}
+}
+
+.cactusOverlay { 
+	position: absolute;
+	z-index: 20;
+	bottom: 100px;
+	right: 0;
+}
+
+.labels {
+	width: 40px;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+
+	img { 
+		padding-bottom: 5px;
+	}
+}
+
+@media (max-width: 1670px) {
+	.cactusOverlay {
+		img {
+			width: 550px;
+		}
+	}
+
+	.moreLink {
+		padding-top: 10px;
+	}
+}
+
+@media (max-width: 1300px) {
+	.featuredRight {
+		padding-top: 60px;
+	}
+}
+
+@media (max-width: 1220px) {
+	.cactusOverlay {
+		img {
+			width: 450px;
+		}
+	}
+}
+
+@media (max-width: 990px) {
+	.featuredGrid { 
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		margin: 55px 0 100px 0;
+	}
+
+	.cactusOverlay {
+		display: none;
+	}
+
+	.featuredLeft { 
+		width: 80%;
+		margin-right: 0;
+	}
+
+	.featuredRight {
+		width: 80%;
+		margin-left: 0;
+		padding-bottom: 60px;
+	}
+
+	.featuredAddCart p {
+		padding: 20px 0;
+	}
+
+	.featuredItem:nth-child(1), .featuredItem:nth-child(2) { 
+		margin-top: 30px;
+	}
+}
+
+@media (max-width: 850px) {
+	.featuredLeft { 
+		width: 100%;
+	}
+
+	.featuredRight {
+		width: 100%;
+	}
+}
+
+@media (max-width: 630px) {
+	.featuredWrapper {
+		li {
+			font-size: 0.9rem;
+			padding-right: 20px;
+		}
+	}
+} 
+
+@media (max-width: 505px) {
+	.featuredLeft {
+		flex-direction: column;
+	}
+
+	.featuredItem {
+		width: 100%;
+	}
+
+	.featuredImg {
+		img {
+			width: 60%;
+		}
+	}
+
+	.labels { 
+		img {
+			width: 100%;
+		}
+	}
+
+	.featuredRight {
+		margin-bottom: 30px;
+	}
+
+	.featuredItem:nth-child(1), .featuredItem:nth-child(2) { 
+		margin-top: 0px;
+	}
+
+	.featuredItem:nth-child(1), .featuredItem:nth-child(2) { //top row of items in left col
+		margin-bottom: 0px;
+	}
+
+	.featuredItem.full-img {
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 490px) {
+	.featuredWrapper {
+		li {
+			font-size: 0.9rem;
+			padding-right: 20px;
+		}
+
+		li:nth-child(3) {
+			padding-right: 0;
+		}
+	}
+} 

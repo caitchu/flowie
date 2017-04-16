@@ -1,0 +1,59 @@
+@import "partials/setup";
+@import "partials/variables";
+@import "partials/header";
+@import "partials/welcome";
+@import "partials/featured";
+@import "partials/arrivals";
+@import "partials/video";
+@import "partials/blog";
+@import "partials/vintage";
+@import "partials/about";
+@import "partials/contact";
+@import "partials/footer";
+
+:root {
+	font-size: 16px;
+}
+
+body {
+	font-family: $mainFont;
+}
+
+.midWidthWrapper {
+	max-width: 1175px;
+	width: 90%;
+}
+
+.welcome, .featured, .arrivals, .video, .blog, .vintage, .advert, .breadcrumbs, .services, .testimonials, .contactInfo, footer {
+	display: flex;
+	justify-content: center;
+
+	h2 {
+		font-size: 1.875rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing:0.05em;
+		text-align: center;
+		padding: 120px 0 10px 0;
+	}
+}
+
+.activeLink {
+	color: $green;
+}
+
+@media (max-width: 1200px) {
+	.welcome, .featured, .arrivals, .video, .blog, .vintage, .advert, .breadcrumbs, .services, .testimonials, .contactInfo, footer {
+		h2 {
+			padding-top: 70px;
+		}
+	}
+}
+
+@media (max-width: 885px) {
+	.welcome, .featured, .arrivals, .video, .blog, .vintage, .advert, .breadcrumbs, .services, .testimonials, .contactInfo, footer {
+		h2 {
+			padding-top: 70px;
+		}
+	}
+}
